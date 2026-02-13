@@ -1,0 +1,271 @@
+/* default settings for margins, padding, scroll behavior, and box settings */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* default settings for text and colors if no overriding style is set */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background-color: #0f1115;
+  color: #e6e6e6;
+  line-height: 1.6;
+}
+
+/* site header will have center-aligned text and be a lighter color than the main body of the site */
+.site-header {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #1f2933, #0f1115);
+}
+
+/* set font size for site header */
+.site-header h1 {
+  font-size: 2.5rem;
+}
+
+/* set gray-ish text color and margins for taglines which will usually appear underneath headers */
+.tagline {
+  color: #a0aec0;
+  margin-top: 0.5rem;
+}
+
+/* set max width, margin, and padding of site content which is the main body of the site */
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* set margins for each section of the site */
+section {
+  margin-bottom: 3rem;
+}
+
+/* set colors, font, margins, and borders for h2 headers which will be used to declare different sections of the main body of the site */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #2d3748;
+  padding-bottom: 0.5rem;
+}
+
+/*
+a project card will exist for each project in the portfolio, cards will give a short description of the project and links to the project, each card
+will be on a rounded rectangle with a lighter background color than the background color of the rest of the site
+*/
+.project-card {
+  background: #151a21;
+  border: 1px solid #2d3748;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* give project cards the appearance of popping up when hovered over */
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* set project card h3 headers font size and margins, these will be used to give the name of the project the project card is for */
+.project-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+/* set the tagline for each project this will appear under the project header and provide info about my role in the project and languages/APIs used */
+.project-tagline {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin-bottom: 0.75rem;
+}
+
+/* set margins for project description */
+.project-description {
+  margin-bottom: 1rem;
+}
+
+/* set code elements to be in a gray box with rounded edges */
+code {
+  display: inline-block;
+  background: #383a3c;
+  border-radius: 8px;
+  padding: 0.25rem;
+}
+
+/* set padding and margins for unordered lists */
+ul {
+  padding-left: 2rem;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+}
+
+/* set margins for list items */
+li {
+  margin-top: 0rem;
+  margin-left: 1.25rem;
+}
+
+/* settings for copyable text elements which will allow users to copy text to their clip board */
+.copyable-text-block {
+  display: flex;
+  background: #383a3c;
+  border-radius: 1rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+  font-family: monospace;
+}
+
+/* center align the copyable text about the y-axis */
+.copyable-text {
+  transform: translate(0%, 12.5%);
+}
+
+/* make copy result inline and give it relative positioning */
+.copy-result-message {
+  position: relative;
+  height: 1rem;
+  width: 6.5rem;
+  display: inline-block;
+}
+
+/*
+display copy result messages as a rounded gray box, they should be on top of each other so make sure their positions are absolutea and set these messages to
+initially be invisible
+*/
+.copy-result-message span {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  background-color: #6a6c6f;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  transform: translate(0%, -25%);
+  opacity: 0;
+}
+
+/* set copy successful message to appear on top of copy failure message */
+.copy-successful-message {
+  z-index: 1;
+}
+
+/* set copy failure message to appear below copy successful message */
+.copy-failure-message {
+  z-index: 0;
+}
+
+/* filler span is used to push subsequent inline elements to the end of a line */
+.filler-span {
+  display: inline-flex;
+  margin: auto;
+}
+
+/* set copyable text button to have no border and inherit its background color from its parent */
+.copyable-text-button {
+  position: relative;
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: auto;
+  background-color: inherit;
+  border: 0rem;
+  border-radius: 0.25rem;
+}
+
+/* highlight copyable text button in gray when it's hovered over as long as the button isn't disabled */
+.copyable-text-button:not(:disabled):hover {
+  background-color: #6a6c6f;
+  cursor: pointer;
+}
+
+/* display copyable text buton icons one on top of the other by making their positions absolute */
+.copyable-text-button svg {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  transform: translate(25%, 25%);
+}
+
+/* set color of clipboard copy icon to be gray and on top of the other two icons and set it to initially be visible */
+.clipboard-copy-icon {
+  filter: invert(85%) sepia(6%) saturate(111%) hue-rotate(8deg) brightness(93%) contrast(82%);
+  opacity: 1;
+  z-index: 2;
+}
+
+/* set color of clipboard check icon to be green and below the clipboard copy icon, but above the clipboard X icon and set it to initially be invisible */
+.clipboard-check-icon {
+  filter: invert(25%) sepia(64%) saturate(3488%) hue-rotate(123deg) brightness(104%) contrast(91%);
+  opacity: 0;
+  z-index: 1;
+}
+
+/* set color of clipboard X icon to be red and below the other two icons and set it to initially be invisible */
+.clipboard-x-icon {
+  filter: invert(15%) sepia(84%) saturate(4285%) hue-rotate(349deg) brightness(94%) contrast(94%);
+  opacity: 0;
+  z-index: 0;
+}
+
+/* set any link to appear as a hyper link would in a text document */
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #63b3ed;
+}
+
+/* set any link to be underlined when hovered over to make them appear as a hyper link in a text document */
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* set site header links to have a top margin and be center-aligned */
+.site-header .div-links {
+  text-align: center;
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+/*
+set links separator (which will be an interpunct) to be larger and we need to translate it down a bit to have it aligned properly with the other text and
+remove margins
+*/
+.links-separator {
+  font-size: 2rem;
+  transform: translateY(0.125rem);
+  margin-left: 0rem;
+  margin-right: 0rem;
+}
+
+/* prevent cursor from switching to pointer when links separator is hovered over */
+.links-separator:hover {
+  cursor: default;
+}
+
+/* set links separator to not be underlined when hovered over */
+.links-separator:hover {
+  text-decoration: none;
+}
+
+
+/* set div links (links that are outside of paragraphs) to have a bold font and a margin so following links will be spaced out */
+.div-links a {
+  font-weight: 1000;
+  margin-right: 1rem;
+}
+
+/* set site footer text, padding, and color */
+.site-footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}

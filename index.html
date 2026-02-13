@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zach Haight | Portfolio</title>
+  <link rel="icon" href="Resources/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- site header -->
+  <header class="site-header">
+    <h1>Zach Haight</h1>
+    <p class="tagline">Software Engineer</p>
+    <div class="div-links">
+      <a href="https://www.linkedin.com/in/zach-haight-00a418366/" target="_blank">LinkedIn</a>
+      <a class="links-separator">·</a>
+      <a href="https://github.com/zachhaight45" target="_blank">GitHub</a>
+    </div>
+  </header>
+
+  <main class="content">
+
+    <!-- about section -->
+    <section id="about" class="about">
+      <h2>About</h2>
+
+      <p>
+        My name is Zach Haight. I graduated from the University of Utah with a B.S.
+        degree in Computer Science. This is my Computer Science portfolio. This portfolio
+        is a compilation of projects that I've worked on either to learn more about a
+        subject or as a hobby.
+      </p>
+    </section>
+
+    <!-- projects section -->
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+
+      <!-- Leviathan project card -->
+      <article id= "Leviathan" class="project-card">
+        <h3>Leviathan</h3>
+
+        <p class="project-tagline">
+          Role: Lead Developer · C++ · Dart · Vulkan · ImGui
+        </p>
+
+        <p class="project-description">
+          Leviathan is a modular, cross-platform game engine that I've been developing in
+          my free time. I've developed this engine from scratch using C++ with Vulkan as the
+          rendering backend and ImGui-based frontend graphics. The engine has a layered
+          architecture, users must create layers and push them to the layer stack to run
+          rendering commands and respond to events. Leviathan has been designed with extensibility
+          and explicit control in mind.
+        </p>
+        <p class="project-description">
+          Initially I began development of Leviathan on my own, but as the project has grown in
+          scale I brought in my friend <a href="https://www.linkedin.com/in/braydengraham/" target="_blank">
+          Brayden Graham</a> to help me create Leviathan. We're working on Leviathan in a private GitHub
+          repository and using Discord to coordinate development. I consider Leviathan proprietary, so I
+          have removed the Git history to provide a public snapshot of the repository for this portfolio.
+          Feel free to use this snapshot of Leviathan however you want.
+        </p>
+        <p class="project-description">
+          Leviathan is still in early development. Many features and systems have not been created yet.
+          The renderer is still very basic. For example, features such as textures are not supported yet.
+          The physics engine has not been created yet and the structure of the audio engine is still being
+          discussed. Many aspects of the engine's structure will change in the future as we get further
+          along in development.
+        </p>
+        <p class="project-description">
+          The <code>README.md</code> file in the top directory of the project provides instructions on how
+          to build and run the engine I'll summarize them here:
+        </p>
+        <ul>
+          <li>
+            On Linux and MacOS the engine assumes you're using GCC or Clang as your compiler. Ensure you
+            already have GCC or Clang installed before continuing.
+          </li>
+          <li>
+            On Windows the engine assumes you're using MSVC as your compiler. Ensure you already have it
+            installed before continuing. If you do not have MSVC installed the easiest way to install it
+            is to through the Visual Studio IDE:
+            <ul>
+              <li>
+                If you don't have Visual Studio installed:
+                <ol type="1">
+                  <li>
+                    Follow this <a href="https://visualstudio.microsoft.com/downloads/" target="_blank">link</a>
+                    to download the Visual Studio installer.
+                  </li>
+                  <li>
+                    Run the Visual Studio installer.
+                  </li>
+                  <li>
+                    While running the Visual Studio installer you'll be prompted to add workloads be sure to add
+                    the <b>"Desktop development with C++" workload</b>, this will install MSVC along with Visual
+                    Studio.
+                  </li>
+                </ol>
+              </li>
+              <li>
+                If you already have Visual Studio installed, but you don't have MSVC installed you'll need to modify
+                your Visual Studio installation to include the <b>"Desktop development with C++" workload</b>:
+                <ol>
+                  <li>
+                    Open Visual Studio.
+                  </li>
+                  <li>
+                    On the tool bar at the top of the window select <b>Tools > Get Tools and Features</b>.
+                  </li>
+                  <li>
+                    You may be prompted to update the Visual Studio installer before continuing. If you are prompted then
+                    update the Visual Studio installer before continuing.
+                  </li>
+                  <li>
+                    You will see a list of your Visual Studio installations navigate to whichever installation you're
+                    going to be using for C++ development and select <b>Modify</b>.
+                  </li>
+                  <li>
+                    You will be prompted to modify the workloads of your installation, be sure to add the
+                    <b>"Desktop development with C++" workload</b>. This will install MSVC along with updating your
+                    installation of Visual Studio with your new <b>"Desktop development with C++" workload</b>.
+                  </li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p class="project-description">
+          Now that you've ensured you have the proper compiler for your system you can build the engine. We've
+          included a Dart script called <code>Bootstrap.dart</code> that will fetch third party dependencies then
+          build and run the engine. You simply need to run it and if prompted to confirm third party installations
+          select yes. To run the script ensure you have <a href="https://dart.dev/get-dart" target="_blank">Dart</a>
+          installed. Then open a terminal and navigate into the base directory of the Leviathan repository and then
+          run the script.
+        </p>
+        <p class="project-description">
+          &nbsp;&nbsp;&nbsp;&nbsp;Linux/Mac:
+        </p>
+        <div class="copyable-text-block">
+          <span class="copyable-text">dart run ./scripts/Bootstrap.dart</span>
+          <span class="filler-span"></span>
+          <div class="copy-ui">
+            <div class="copy-result-message">
+              <span class="copy-successful-message">Copied!</span>
+              <span class="copy-failure-message">Copy failed!</span>
+            </div>
+            <button class="copyable-text-button">
+              <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-copy-icon">
+                <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+              </svg>
+              <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-check-icon">
+                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+              </svg>
+              <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-x-icon">
+                <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 1 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <p class="project-description">
+          &nbsp;&nbsp;&nbsp;&nbsp;Windows:
+        </p>
+        <div class="copyable-text-block">
+          <span class="copyable-text">dart run .\scripts\Bootstrap.dart</span>
+          <span class="filler-span"></span>
+          <div class="copy-ui">
+            <div class="copy-result-message">
+              <span class="copy-successful-message">Copied!</span>
+              <span class="copy-failure-message">Copy failed!</span>
+            </div>
+            <button class="copyable-text-button">
+              <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-copy-icon">
+                <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+              </svg>
+              <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-check-icon">
+                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+              </svg>
+              <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-x-icon">
+                <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 1 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <p class="project-description">
+          The script may take a while to run. Fetching Git submodules typically takes the most time. When the build
+          finishes the script will run the application. The application will display a rotating sphere on screen with
+          an ImGui menu to modify the amount of horizontal and vertical rings the sphere has and an ImGui menu reporting
+          the current FPS of the window.
+        </p>
+        <p class="project-description">
+          You can rerun the Bootstrap script whenever you want to run the application as long as no source files were
+          modified the build won't also rerun.
+        </p>
+        <p class="project-description">
+          If you want you can modify the code in <code>Client/src/ClientApp.cpp</code> to display something else. The
+          rotating sphere is just a demo, you can render anything you want. You just need to create a vertex buffer,
+          create an index buffer for that vertex buffer, create a vertex array from the buffers you created, then submit
+          your vertex array to the renderer once per frame. Be sure your camera is positioned correctly so you can see the
+          object that you're rendering. Of course you'll need to rebuild the engine if you modify the code, fortunately all you
+          have to do is rerun the Bootstrap script and the engine will rebuild automatically. Read the comments in the code and
+          the documentation to know how to work with Leviathan's API.
+          <br>
+          <i>
+            It should be noted that the documentation, like the rest of the engine, is still a work in
+            progress so some information in the documentation may be outdated.
+          </i>
+        </p>
+        <p class="project-description">
+          There are two different ways I've provided for you to download the repository in the links below:
+          <ul>
+            <li>Click the "GitHub" link below to view the repository on GitHub and clone it.</li>
+            <li>Click the "Download" link below to download a zip file containing the repository.</li>
+          </ul>
+        </p>
+
+        <div class="div-links">
+          <a href="https://github.com/zachhaight45/Leviathan" target="_blank">GitHub</a>
+          <a href="Downloads/Leviathan/Leviathan.zip" target="_blank">Download</a>
+        </div>
+      </article>
+
+      <!-- Deck Designer project card -->
+      <article id="Deck-Designer" class="project-card">
+        <h3>Deck Designer</h3>
+
+        <p class="project-tagline">
+          Role: Developer · Typescript · Tauri · React · SQLite · Swagger
+        </p>
+
+        <p class="project-description">
+          Deck Designer is the project I worked on for my Capstone at the University of Utah. Capstone projects
+          are done in groups of four. I've worked on this project with Joshua Beatty, Justin Zhu, and Lucas Jones.
+          Deck Designer is an application for streamlining the design of card games. It provides tools to quickly
+          and efficiently design your own card game. More specifically, Deck Designer is used to design the cards
+          in a card game.
+        </p>
+        <p class="project-description">
+          Deck Designer was coded in Typescript and built using Tauri. React was utilized to build the UI of Deck
+          Designer. All projects created in Deck Designer all saved locally to SQL databases in the user's APPDATA
+          directory. The SQL databases were created using SQLite. The reason project's are saved locally is so that
+          Deck Designer can be used entirely offline, but we do have server's that users can use to back up and share
+          their projects with other users. We used Swagger to program those servers.
+        </p>
+        <p class="project-description">
+          My role in the project was working on the SQL databases that user's projects were saved to. I planned and
+          created the structure for the project databases. Then I created a user friendly API that the rest of my team
+          could use to create new project databases, modify a project's database, delete a project database, etc. The
+          API, I created, was structured with low-level functions that acted as Typescript wrappers around SQL commands
+          and higher-level functions that utilized these low-level functions to do more complex tasks. These higher-level
+          functions are the functions that my team called in their code, while the low-level functions were used exclusively
+          by me.
+        </p>
+        <p class="project-description">
+          I programmed a website for Deck Designer (using HTML, CSS, and Javascript) that goes into more detail about the
+          application. The website is hosted on my CADE account at the University of Utah, if the university decides to
+          delete my CADE account (because I'm no longer a student there) then the website won't work. Fortunately, as of the
+          time I'm writing this the website is still up.
+        </p>
+        <p class="project-description">
+          The links I've included below don't include any source code, it's just binaries and installer files. The reason for
+          this is I only own 25% of Deck Designer's IP (the project's IP is divided evenly among my team), so I can't provide
+          the source code without their permission and we've been out of contact since graduation. So you won't be able to
+          view the source code, but you will be able to install Deck Designer and try it for yourself.
+        </p>
+        <p class="project-description">
+          The links below contain a link to the Deck Designer website, a link tutorial videos, and the installer files for each
+          platform supported by Deck Designer (Linux, MacOS, and Windows). I've included instructions on how to install and run
+          Deck Designer for each of these platforms:
+          <ul>
+            <li>
+              Click the "Website" link below to view the Deck Designer website (as I said above there's a
+              possibility the website will be taken down so the link might not work). The website has more
+              information on the project, some tutorials, and download links.
+            </li>
+            <li>
+              Click the "Tutorials" link below to view a playlist of YouTube videos that each show a brief tutorial on
+              how to use a feature of Deck Designer. These videos are on the website, but I'm putting them here in case
+              the website is taken down.
+            </li>
+            <li>
+              Click the "Linux (.deb)" link below to download the Debian installation package for Deck Designer.
+              This installation file should work on Debian distributions of Linux (such as Ubuntu). Installing
+              the file is simple:
+              <ol>
+                <li>
+                  After downloading the Debian installation package file open a terminal and navigate to the
+                  directory the file has been downloaded to.
+                </li>
+                <li>
+                  Run the following command to install Deck Designer:<br><br>
+                  <div class="copyable-text-block">
+                    <span class="copyable-text">sudo apt install ./deckdesigner_0.1.0_amd64.deb</span>
+                    <span class="filler-span"></span>
+                    <div class="copy-ui">
+                      <div class="copy-result-message">
+                        <span class="copy-successful-message">Copied!</span>
+                        <span class="copy-failure-message">Copy failed!</span>
+                      </div>
+                      <button class="copyable-text-button">
+                        <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-copy-icon">
+                          <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+                        </svg>
+                        <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-check-icon">
+                          <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+                        </svg>
+                        <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-x-icon">
+                          <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 1 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  Then run Deck Designer:<br><br>
+                  <div class="copyable-text-block">
+                    <span class="copyable-text">deckdesigner</span>
+                    <span class="filler-span"></span>
+                    <div class="copy-ui">
+                      <div class="copy-result-message">
+                        <span class="copy-successful-message">Copied!</span>
+                        <span class="copy-failure-message">Copy failed!</span>
+                      </div>
+                      <button class="copyable-text-button">
+                        <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-copy-icon">
+                          <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+                        </svg>
+                        <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-check-icon">
+                          <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+                        </svg>
+                        <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-x-icon">
+                          <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 1 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </li>
+            <li>
+              Click the "Linux (.rpm)" link below to download the Red Hat installation package for Deck Designer.
+              This installation file should work on Red Hat distributions of Linux (such as Fedora). Installing
+              the file is simple:
+              <ol>
+                <li>
+                  After downloading the Red Hat installation package file open a terminal and navigate to the
+                  directory the file has been downloaded to.
+                </li>
+                <li>
+                  Run the following command to install Deck Designer:<br><br>
+                  <div class="copyable-text-block">
+                    <span class="copyable-text">sudo dnf install ./deckdesigner-0.1.0-1.x86_64.rpm</span>
+                    <span class="filler-span"></span>
+                    <div class="copy-ui">
+                      <div class="copy-result-message">
+                        <span class="copy-successful-message">Copied!</span>
+                        <span class="copy-failure-message">Copy failed!</span>
+                      </div>
+                      <button class="copyable-text-button">
+                        <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-copy-icon">
+                          <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+                        </svg>
+                        <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-check-icon">
+                          <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+                        </svg>
+                        <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-x-icon">
+                          <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 1 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  Then run Deck Designer:<br><br>
+                  <div class="copyable-text-block">
+                    <span class="copyable-text">deckdesigner</span>
+                    <span class="filler-span"></span>
+                    <div class="copy-ui">
+                      <div class="copy-result-message">
+                        <span class="copy-successful-message">Copied!</span>
+                        <span class="copy-failure-message">Copy failed!</span>
+                      </div>
+                      <button class="copyable-text-button">
+                        <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-copy-icon">
+                          <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+                        </svg>
+                        <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-check-icon">
+                          <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+                        </svg>
+                        <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-x-icon">
+                          <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 1 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </li>
+            <li>
+              Click the "Linux (.AppImage)" link below to download the portable Linux software package for Deck Designer.
+              Unlike other download links this is not an installation file this is the binary for Deck Designer packaged in
+              a way that it can be run on any Linux system. I'd recommend only downloading the AppImage if you're running a
+              Linux platform that isn't a Debian distro or a Red Hat distro. Here's how to run the AppImage file:
+              <ol>
+                <li>
+                  After downloading the AppImage file open a terminal and navigate to the directory the AppImage has been
+                  downloaded to.
+                </li>
+                <li>
+                  Give the AppImage file executable privileges by running chmod:<br><br>
+                  <div class="copyable-text-block">
+                    <span class="copyable-text">chmod a+x deckdesigner_0.1.0_amd64.AppImage</span>
+                    <span class="filler-span"></span>
+                    <div class="copy-ui">
+                      <div class="copy-result-message">
+                        <span class="copy-successful-message">Copied!</span>
+                        <span class="copy-failure-message">Copy failed!</span>
+                      </div>
+                      <button class="copyable-text-button">
+                        <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-copy-icon">
+                          <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+                        </svg>
+                        <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-check-icon">
+                          <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+                        </svg>
+                        <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-x-icon">
+                          <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 1 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  You may need to install additional programs to run AppImages on your computer. For example, I'm running Ubuntu,
+                  so I needed to install FUSE to run AppImages. Apparently other Linux distros come with FUSE already installed,
+                  but Ubuntu doesn't, so I ran this command to install FUSE:<br><br>
+                  <div class="copyable-text-block">
+                    <span class="copyable-text">sudo apt install libfuse2</span>
+                    <span class="filler-span"></span>
+                    <div class="copy-ui">
+                      <div class="copy-result-message">
+                        <span class="copy-successful-message">Copied!</span>
+                        <span class="copy-failure-message">Copy failed!</span>
+                      </div>
+                      <button class="copyable-text-button">
+                        <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-copy-icon">
+                          <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+                        </svg>
+                        <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-check-icon">
+                          <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+                        </svg>
+                        <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-x-icon">
+                          <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 1 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  Your system may require you to install FUSE as well or maybe you'll need to install other programs to run AppImage
+                  files the process may vary among different Linux distros. You'll just need to troubleshoot it if you aren't able
+                  to immediately run the AppImage after giving it executable privileges.
+                </li>
+                <li>
+                  Run the AppImage file and Deck Designer should start up:<br><br>
+                  <div class="copyable-text-block">
+                    <span class="copyable-text">./deckdesigner_0.1.0_amd64.AppImage</span>
+                    <span class="filler-span"></span>
+                    <div class="copy-ui">
+                      <div class="copy-result-message">
+                        <span class="copy-successful-message">Copied!</span>
+                        <span class="copy-failure-message">Copy failed!</span>
+                      </div>
+                      <button class="copyable-text-button">
+                        <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-copy-icon">
+                          <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+                        </svg>
+                        <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-check-icon">
+                          <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+                        </svg>
+                        <svg aria-hidden="true" height="16" width="16" viewBox="0 0 16 16" version="1.1" class="clipboard-x-icon">
+                          <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 1 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  Optionally you can move the file into one of your PATH directories or put the file in a directory and add that
+                  directory to your PATH so that you can easily run the AppImage file from any directory you're currently working
+                  in by just running: <code>deckdesigner_0.1.0_amd64.AppImage</code>, instead of needing to run:
+                  <code>path/to/DeckDesigner-AppImage/deckdesigner_0.1.0_amd64.AppImage</code> every time you want to run Deck
+                  Designer.<br>
+                  <i>You should be able to find instructions for how to do this for your specific Linux distribution online.</i>
+                </li>
+              </ol>
+            </li>
+            <li>
+              Click the "MacOS" link to download the Apple Disk Image (.dmg) file for Deck Designer. This file should work on most
+              versions of MacOS. To install Deck Designer for MacOS on your system:
+              <ol>
+                <li>
+                  After downloading the Apple Disk Image (.dmg) file open your Finder application and go to the directory you've
+                  downloaded the Apple Disk Image (.dmg) file to (most likely the file will be in your Downloads folder).
+                </li>
+                <li>
+                  Double click the file to mount it as a virtual disk. The file's name will show up in Finder's sidebar and a
+                  window should open up, displaying the content of the Apple Disk Image (.dmg) file.
+                </li>
+                <li>
+                  In the window that opened up drag the application from that window to /Applications to install Deck Designer.
+                </li>
+                <li>
+                  Eject the Application Disk Image (.dmg) virtual disk by clicking the eject button for the Application Disk Image
+                  (.dmg) file on the sidebar of Finder.
+                </li>
+                <li>
+                  Now you can safely delete the Application Disk Image (.dmg) file.
+                </li>
+                <li>
+                  You can run Deck Designer in several different ways:
+                  <ul>
+                    <li>
+                      In Finder you can go to <code>/Applications</code>, find Deck Designer and double click the app.
+                    </li>
+                    <li>
+                      You can open up Spotlight Search by pressing <b>Command(⌘) + Spacebar</b> then search the app's name (deckdesigner).
+                      Then double click Deck Designer when you've found it in the search results.
+                    </li>
+                    <li>
+                      You could ask Siri to open Deck Designer for you.
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+            </li>
+            <li>
+              Click the "Windows" link to download the Microsoft Installer file for Deck Designer. Running the MSI file is simple:
+              <ol>
+                <li>
+                  Open File Explorer and navigate to the directory you've installed the MSI file to (most likely it will be in your
+                  Downloads directory).
+                </li>
+                <li>
+                  Double click the file to start the installation wizard.
+                </li>
+                <li>
+                  Follow the instructions in the installation wizard to install Deck Designer.
+                </li>
+                <li>
+                  To run Deck Designer you can either double click the desktop shortcut that you should have been prompted to create
+                  while following the instructions in the installation wizard or if you don't have the desktop shortcut press
+                  <b>Windows Key + R</b> to open the "Run" box then type in the app's name (deckdesigner).
+                </li>
+              </ol>
+            </li>
+          </ul>
+        </p>
+
+        <div class="div-links">
+          <a href="https://my.eng.utah.edu/~u1229366/deck-designer/home.html" target="_blank">Website</a>
+          <a href="https://www.youtube.com/playlist?list=PLD_18UVErfnSBSMt6BuvFG0tJGIcxBMdf" target="_blank">Tutorials</a>
+          <a href="Downloads/Deck-Designer/deckdesigner_0.1.0_amd64.deb" target="_blank">Linux (.deb)</a>
+          <a href="Downloads/Deck-Designer/deckdesigner-0.1.0-1.x86_64.rpm" target="_blank">Linux (.rpm)</a>
+          <a href="Downloads/Deck-Designer/deckdesigner_0.1.0_amd64.AppImage" target="_blank">Linux (.AppImage)</a>
+          <a href="Downloads/Deck-Designer/deckdesigner_0.1.0_aarch64.dmg" target="_blank">MacOS</a>
+          <a href="Downloads/Deck-Designer/deckdesigner_0.1.0_x64_en-US.msi" target="_blank">Windows</a>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Zach Haight</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
